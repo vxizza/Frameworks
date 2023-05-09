@@ -5,7 +5,7 @@
 }
 
 .container {
-    margin: 20px;
+    margin: 20px auto;
     width: 90%;
     height: 100vh;
     display: grid;
@@ -32,7 +32,7 @@
 .profile .img {
     width: 80px;
     height: 80px;
-    background: #660b40;
+    background: #d89ec0;
     border-radius: 50%;
 }
 
@@ -105,7 +105,7 @@
 .content .search .input .icon {
     height: 100%;
     color: #fff;
-    background: #6555e2;
+    background: #df779f;
     font-size: 24px;
     width: 40px;
     display: flex;
@@ -113,3 +113,69 @@
     justify-content: center;
     cursor: pointer;
 }
+
+.content .info {
+    display: grid;
+    grid-template-columns: 2.7fr 1.3fr;
+    gap: 30px;
+}
+ .content .info .box1 {
+    background: #a72d7e;
+}
+
+.content .info .box2 {
+    background: #d0abee;
+}
+
+.content .adm {
+    display: grid;
+    grid-template-columns: 1.4fr 1.1fr;
+    gap: 30px;
+    margin-top: 30px;
+
+}
+ .content .adm .team {
+  background: rgb(236, 177, 226);
+
+ }
+
+ .content .adm .task{
+     background: rgb(58, 224, 188);
+ }
+
+ .content .adm .team .title {
+     background: rgb(96, 250, 211);
+     align-items: center;
+     display: flex;
+     height: 50px;
+     border-radius: 1px;
+
+ }
+
+
+ .content .adm .team .title .ball {
+     background: rgb(203, 162, 241);
+     border-radius: 50%;
+     width: 30px;
+     height: 30px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 0 15px 0 25px;
+     
+ }
+
+ .content .adm .team .title .ball i {
+      color: #fff;
+      font-size: 22px;
+ }
+
+ .content .adm .team .title span {
+     font-size: 18px;
+     font-weight: 600;
+ }
+
+
+
+
+  
