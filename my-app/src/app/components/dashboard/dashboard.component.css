@@ -44,13 +44,13 @@
 
 .user-info .menu li i {
     color: #696969;
-    font-size: 19px;
+    font-size: 15px;
     margin-right: 15px;
 }
 
 .user-info .menu li a {
     color: #696969;
-    font-size: 19px;
+    font-size: 15px;
     text-decoration: none;
 }
 
@@ -182,10 +182,6 @@
     
  }
 
- .container .user div {
-    background: #beb5bb;
-
- }
 
  .container .user .box-1{
     display: flex;
@@ -206,22 +202,83 @@
 .container .user .box-2 {
    font-size: 25px;
    margin: 0 10px;
-
-   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
  }
- .container .user .box-2 img {
+
+ .container .user .box-2 .ball img {
     width: 100px;
- }
+    border-radius: 50%;
+    height: 100px;
 
-.container .user .box-3 {
-    background: #b8aeb7;
- 
- } 
+ }
 
  .container .user .box-4 {
-    background: #b8aeb7;
+    background: #ffd7fb;
 
  }
+
+ 
+ .container .user .box-2 h5 {
+    color: #6957f8;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.container .user .box-3 {
+    display: grid;
+    place-items: center;
+    
+}
+
+ .container .user .box-3 .box {
+    width: 90%;
+    background: #e2e9ef;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100px;
+}
+
+.container .user .box-3 .box .item-1 .ball  {
+    height: 50px;
+    width: 50px;
+    background: #4d2366;
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    place-items: center;
+    font-size: 22px;
+    color: #94ffd3;
+    margin-right: 5px;
+}
+
+.container .user .box-3 .box .item-1 .ball i{
+    font-size: 24px;
+    color: aqua;
+
+}
+
+.container .user .box-3 .box .item-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid #a72d7e; 
+}
+
+.container .user .box-3 .box .item-1 .container .user .box-3 .box .item-2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+
+
+
+
 
 
 
