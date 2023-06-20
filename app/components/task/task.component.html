@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="task">
+        <div class="itens">
+            <h4>Task Information</h4>
+            <div class="item-1">
+                <label for="nome-task">Task: </label>
+                <input type="text" name="nome-task" id="nome-task" [formControl]="nome"/>
+           
+                <label for="dresc-task">Descrição: </label>
+                <input type="text" name="dresc-task" id="dresc-task" [formControl]="descricao"/>
+           
+                <label for="resp-task">Responsável: </label>
+                <input type="text" name="resp-task" id="resp-task" [formControl]="responsavel"/>
+            
+                <label for="data-cria">Data da Criação: </label>
+                <input type="date" name="data-cria" id="data-inicio" [formControl]="dt_inicio"/>
+          
+                <label for="data-term">Data da Término: </label>
+                <input type="date" name="data-term" id="data-fim" [formControl]="dt_fim"/>
+            </div>
+
+        </div>
+
+        <div class="button">
+            <button>Cancelar</button>
+            <button (click)="addTask()">cadastrar</button>
+        </div>
+    </div>
+</div>
