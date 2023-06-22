@@ -1,35 +1,34 @@
 <div class="container">
     <div class="user-info">
 
-
-             <div class="profile">
+        <div class="profile">
             <div class="img"></div>
-            <h2>Olá, Izadora!</h2>
+            <h2>Hi, Izadora!</h2>
         </div>
-         <div class="menu"> 
+
+        <div class="menu">
             <ul>
                 <li>
                     <i class='bx bxs-dashboard'></i>
                     <a href="#">Dashboard</a>
                 </li>
                 <li>
-                    <i class='bx bxs-user' ></i>
+                    <i class='bx bxs-user'></i>
                     <a href="#">My Profile</a>
                 </li>
                 <li>
-                    <i class='bx bx-list-ul' ></i>
+                    <i class='bx bx-list-ul'></i>
                     <a href="#">My Subscription</a>
                 </li>
                 <li>
-                    <i class='bx bxs-balloon' ></i>
+                    <i class='bx bxs-balloon'></i>
                     <a href="#">My Listings</a>
                 </li>
                 <li>
-                    <i class='bx bx-plus' ></i>
+                    <i class='bx bx-plus'></i>
                     <a href="#">Add New Listing</a>
                 </li>
             </ul>
-
 
         </div>
     </div>
@@ -41,31 +40,147 @@
             </div>
             <div class="input">
                 <input type="text" name="pesq" id="pesq" placeholder="Search...">
-                      <div class="icon">
+
+                <div class="icon">
                     <i class='bx bx-search-alt-2'></i>
                 </div>
             </div>
 
-
         </div>
-
 
         <div class="info">
-            <div class="box1"></div>
-            <div class="box2"></div>
+            <div class="box1">
+                <img src="avatar.png" alt="">
+            </div>
+            <div class="box2">
+                <img src="img.PNG" alt="">
+            </div>
         </div>
-
 
         <div class="adm">
             <div class="team">
                 <div class="title">
                     <div class="ball">
-                        <i class='bx bx-plus'></i>            
-        </div>
+                        <i class='bx bx-plus'></i>
+                    </div>
                     <span>Membros do Time</span>
                 </div>
+
+                <div class="box">
+                    <div class="member">
+                        <img src="/assets/avatar.png" alt="">
+                        <div class="info-member">
+                            <h4>Fulano</h4>
+                            <h5>Professor</h5>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="/assets/avatar.png" alt="">
+                        <div class="info-member">
+                            <h4>Fulano</h4>
+                            <h5>Professor</h5>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="/assets/avatar.png" alt="">
+                        <div class="info-member">
+                            <h4>Fulano</h4>
+                            <h5>Professor</h5>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="/assets/avatar.png" alt="">
+                        <div class="info-member">
+                            <h4>Fulano</h4>
+                            <h5>Professor</h5>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="/assets/avatar.png" alt="">
+                        <div class="info-member">
+                            <h4>Fulano</h4>
+                            <h5>Professor</h5>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="/assets/avatar.png" alt="">
+                        <div class="info-member">
+                            <h4>Fulano</h4>
+                            <h5>Professor</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="title">
+                    <div class="ball">
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <span>Atividades</span>
+                </div>
+
+                <div class="detail-at">
+                    <div class="member">
+                        <img src="/assets/avatar.png" alt="">
+                        <div class="info-member">
+                            <h4>Ciclano</h4>
+                            <h5>Professora</h5>
+                            <h5 class="data">30 de Maio 2023</h5>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="/assets/avatar.png" alt="">
+                        <div class="info-member">
+                            <h4>Ciclano</h4>
+                            <h5>Estudante</h5>
+                            <h5 class="data">30 de Maio 2023</h5>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="/assets/avatar.png" alt="">
+                        <div class="info-member">
+                            <h4>Ciclano</h4>
+                            <h5>Estudante</h5>
+                            <h5 class="data">30 de Maio 2023</h5>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="/assets/avatar.png" alt="">
+                        <div class="info-member">
+                            <h4>Ciclano</h4>
+                            <h5>Professora</h5>
+                            <h5 class="data">30 de Maio 2023</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="task"></div>
+
+
+            <div class="task">
+                <div class="title" (click)="addTask()">
+                    <div class="title">
+                        <div class="ball">
+                            <i class='bx bx-plus'></i>
+                        </div>
+                        <span>Adicionar nova tarefa</span>
+                    </div>
+                
+                <div class="tasks">
+                <div class="new-tasks"></div>
+
+                <div *ngFor="let t of tasks">
+                    <span>Task:{{t.nome}}</span><br>
+                    <span>Descricao:{{t.descricao}}</span><br>
+                    <span>Responsavel:{{t.responsavel}}</span><br>
+                    <span>Data da Criação:{{t.dt_inicio}}</span><br>
+                    <span>Data do Termino:{{t.dt_fim}}</span><br>
+                    
+                </div>
+                    
+
+                </div>
+            </div>
+
+            </div>
         </div>
 
     </div>
@@ -73,14 +188,14 @@
     <div class="user">
         <div class="box-1">
             <i class='bx bx-bell'></i>
-            <i class='bx bx-cog' ></i>
-            <i class='bx bxs-user-circle' ></i>
+            <i class='bx bx-cog'></i>
+            <i class='bx bxs-user-circle'></i>
         </div>
         <div class="box-2">
-           <div class="ball">    
-          <img src= "./assets/avatar.png" alt=""/>
+            <div class="ball">
+                <img class="img" src="/assets/avatar.png" alt="">
             </div>
-             <h3>Izadora</h3>
+            <h3>Izadora</h3>
             <h5>Estudante</h5>
         </div>
         <div class="box-3">
@@ -107,88 +222,73 @@
         </div>
         <div class="box-4">
             <div class="user-title">
-                <h3>Tarefas em Andamentos</h3>
-                <a href="#">Monstrar todos</a>
+                <h3>Tarefas em Andamento</h3>
+                <a href="#">Mostrar todos</a>
             </div>
 
-                <div class="task-list">
-                    <div class="number">
-                        <span>02d</span>
-                    </div>
-                    <div class="task-info">
-                        <h4>Criar a grid do login</h4>
-                        <h5>Tempo restante: 2d</h5>
-                    </div>
+            <div class="task-list">
+                <div class="number">
+                    <span>01</span>
                 </div>
-
-                <div class="task-list">
-                    <div class="number">
-                        <span>01d</span>
-                    </div>
-                    <div class="task-info">
-                        <h4>Criar a grid do login</h4>
-                        <h5>Tempo restante: 1d</h5>
-                    </div>
+                <div class="task-info">
+                    <h4>Criar a grid do login</h4>
+                    <h5>Tempo restante: 1d</h5>
                 </div>
+            </div>
 
+
+            <div class="task-list">
+                <div class="number">
+                    <span>02</span>
+                </div>
+                <div class="task-info">
+                    <h4>Criar a grid do dashboard</h4>
+                    <h5>Tempo restante: 3d</h5>
+                </div>
+            </div>
 
 
             <div class="user-title">
-                <h3>Tarefas em Recentes</h3>
-                <a href="#">Monstrar todos</a>
+                <h3>Tarefas Recentes</h3>
+                <a href="#">Mostrar todos</a>
             </div>
-              
+
             <div class="recent-task">
-            <div class="status"
-            <div class="ball"></div>
-            <h5>Cadastrar usuario</h5>
+                <div class="status">
+                    <div class="ball"></div>
+                    <h5>Cadastrar usuário</h5>
+                </div>
+                <h5 class="time">3d</h5>
             </div>
-            <h5 class="time">3d</h5>
-
-
-        </div> 
             <div class="recent-task">
-            <div class="status"
-            <div class="ball"></div>
-            <h5>Cadastrar usuario</h5>
+                <div class="status">
+                    <div class="ball"></div>
+                    <h5>Cadastrar GitHub</h5>
+                </div>
+                <h5 class="time">4d</h5>
             </div>
-            <h5 class="time">3d</h5>
-
-
-        </div> 
             <div class="recent-task">
-            <div class="status"
-            <div class="ball"></div>
-            <h5>Cadastrar usuario</h5>
+                <div class="status">
+                    <div class="ball"></div>
+                    <h5>Fazer tarefa 02</h5>
+                </div>
+                <h5 class="time">5d</h5>
             </div>
-            <h5 class="time">3d</h5>
-
-
-        </div> 
             <div class="recent-task">
-            <div class="status"
-            <div class="ball"></div>
-            <h5>Cadastrar usuario</h5>
+                <div class="status">
+                    <div class="ball"></div>
+                    <h5>Assistir reunião</h5>
+                </div>
+                <h5 class="time">6d</h5>
             </div>
-            <h5 class="time">3d</h5>
-
-
-        </div> 
             <div class="recent-task">
-            <div class="status"
-            <div class="ball"></div>
-            <h5>Cadastrar usuario</h5>
+                <div class="status">
+                    <div class="ball"></div>
+                    <h5>Ir no médico</h5>
+                </div>
+                <h5 class="time">7d</h5>
             </div>
-            <h5 class="time">3d</h5>
 
-
-        </div> 
-        
         </div>
     </div>
 </div>
-
-
-
-
-
